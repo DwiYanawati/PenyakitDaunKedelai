@@ -1,2 +1,0 @@
-# PenyakitDaunKedelai
-Website
