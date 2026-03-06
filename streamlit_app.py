@@ -118,20 +118,40 @@ if model is not None:
             st.metric("Fitur", "Upload & Deteksi", "Real-time")
         
         st.markdown("---")
-        st.subheader("Tentang Aplikasi")
-        st.write("""
-        Aplikasi ini menggunakan **YOLOv9** untuk mendeteksi penyakit pada daun kedelai.
         
-        **Cara kerja:**
-        1. Upload gambar daun kedelai
-        2. Sistem akan memproses gambar menggunakan AI
-        3. Hasil deteksi akan ditampilkan dengan bounding box
+        # ========== 3 TABS UNTUK INFORMASI ==========
+        tab1, tab2, tab3 = st.tabs(["📖 Tentang Aplikasi", "🎯 Cara Kerja", "📊 Model Training"])
         
-        **Model dilatih dengan:**
-        - Dataset penyakit daun kedelai
-        - Arsitektur YOLOv9
-        - Framework Ultralytics
-        """)
+        with tab1:
+            st.subheader("📖 Tentang Aplikasi")
+            st.write("""
+            Aplikasi ini menggunakan **YOLOv9** untuk mendeteksi penyakit pada daun kedelai.
+            
+            **Model dilatih dengan:**
+            - Dataset penyakit daun kedelai
+            - Arsitektur YOLOv9
+            - Framework Ultralytics
+            """)
+        
+        with tab2:
+            st.subheader("🎯 Cara Kerja")
+            st.write("""
+            **📤 Upload Gambar:**
+            1. Upload gambar daun kedelai
+            2. Sistem memproses gambar 
+            3. Hasil deteksi ditampilkan dengan bounding box
+            4. Detail deteksi (nama penyakit, confidence) ditampilkan
+            """)
+        
+        with tab3:
+            st.subheader("📊 Model Training")
+            st.write("""
+            **Dataset:** Penyakit Daun Kedelai (5 kelas)
+            **Arsitektur:** YOLOv9
+            **Framework:** Ultralytics
+            """)
+        
+        st.markdown("---")
 
 else:
     st.error("❌ Gagal memuat model. Pastikan file best.pt ada di folder yang benar.")
