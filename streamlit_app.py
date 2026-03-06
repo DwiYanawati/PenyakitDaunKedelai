@@ -27,7 +27,7 @@ with st.sidebar:
         """
         1. Pilih mode **Upload Gambar**
         2. Upload foto daun kedelai
-        3. Tunggu hasil deteksi
+        3. Klik tombol deteksi
         """
     )
 
@@ -162,3 +162,4 @@ st.markdown(
     "<center>© 2026 | Deteksi Penyakit Daun Kedelai | Universitas Islam Indonesia</center>",
     unsafe_allow_html=True
 )
+
